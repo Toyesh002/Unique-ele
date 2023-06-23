@@ -1,0 +1,33 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+int unique(int a[],int s){
+    
+    for(int i=0;i<s;i++){
+        int count=0;
+        for(int j=0;j<s;j++){
+            if(a[i]==a[j]){
+                count=count+1;
+            }
+           
+        }
+        if(count==1){
+            cout<<"unique element is : "<<a[i];
+        }
+    }
+ 
+    return 0;
+}
+
+int main() {
+    int n;
+    cin>>n;
+
+int a[n];
+for(int i=0;i<n;i++){
+    cin>>a[i];
+}
+unique(a,n);
+    return 0;
+}
